@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Data Analysis Results</h2>
+        
+        <div class="section">
+            <h3 class="section-title">First Few Rows:</h3>
+            {{ first_rows|safe }}
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Summary Statistics:</h3>
+            {{ summary_stats|safe }}
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Missing Values:</h3>
+            {{ missing_values|safe }}
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Histograms:</h3>
+            {% for column, plot_base64 in histograms.items %}
+                <h4>{{ column }}</h4>
+                <img src="data:image/png;base64,{{ plot_base64 }}" alt="Histogram of {{ column }}">
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
