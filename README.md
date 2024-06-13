@@ -12,4 +12,61 @@ This Django-based web application allows users to upload CSV files, perform data
 - **User-Friendly Interface**: The entire user interface is designed to be intuitive and user-friendly, making it accessible to users with varying levels of technical expertise.
 - **Flexibility and Scalability**: The application is designed to be flexible and scalable, allowing for easy integration of additional features and functionalities in the future.
 
+## Setup Instructions
+
+1. **Clone the Repository**: 
+   ```
+   git clone https://github.com/VivekT7785/-Django-Data-Analysis-Web-App
+   ```
+
+2. **Navigate to the Project Directory**:
+   ```
+   cd django-data-analysis-web-app
+   ```
+
+3. **Create a Virtual Environment**:
+   ```
+   python3 -m venv venv
+   ```
+
+4. **Activate the Virtual Environment**:
+   - On Windows:
+     ```
+     venv\Scripts\activate
+     ```
+   - On macOS and Linux:
+     ```
+     source venv/bin/activate
+     ```
+
+5. **Install Dependencies**:
+   ```
+   pip install -r requirements.txt
+   ```
+
+6. **Run Migrations**:
+   ```
+   python manage.py migrate
+   ```
+
+7. **Start the Development Server**:
+   ```
+   python manage.py runserver
+   ```
+
+8. **Access the Application**:
+   Open your web browser and navigate to `http://127.0.0.1:8000/` to access the application.
+
+## Technologies Used
+
+- Python
+- Django
+- pandas
+- numpy
+- matplotlib
+
+## Contributing
+
+Contributions are welcome! Please feel free to fork the repository, make pull requests, and suggest improvements.
+
 
