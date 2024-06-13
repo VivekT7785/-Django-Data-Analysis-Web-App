@@ -65,8 +65,4 @@ This Django-based web application allows users to upload CSV files, perform data
 - numpy
 - matplotlib
 
-## Contributing
-
-Contributions are welcome! Please feel free to fork the repository, make pull requests, and suggest improvements.
-
 
